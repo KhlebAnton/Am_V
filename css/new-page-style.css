@@ -501,6 +501,9 @@ gap: 14px;
     .services-main .container {
         padding: 0;
     }
+    .services-main .breadcrumbs {
+        padding: 0 15px;
+    }
     .hero-text {
         font-weight: 400;
         font-size: 16px;
