@@ -7,18 +7,11 @@ document.addEventListener('DOMContentLoaded', function () {
             delay: 3000,
             disableOnInteraction: false,
         },
-
-        // Пагинация
         pagination: {
             el: '.swiper-pagination',
             clickable: true,
         },
-
-
         effect: 'slide',
-
-
-
     });
 
     const porchModal = document.querySelector('.modal_overlay[data-modal="porch-modal"]');
@@ -83,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function () {
     imgModalBtns.forEach(btn => {
         btn.addEventListener('click', ()=> {
             
-            openImgModal(btn.querySelector('img').src)
+            openImgModal(btn.getAttribute('data-img-src') ? btn.getAttribute('data-img-src') : btn.querySelector('img').src )
         })
     })
     function openImgModal(srcImg) {
